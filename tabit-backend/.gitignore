@@ -32,5 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 
-# Application properties (contains sensitive credentials)
-src/main/resources/application.properties
+# Application properties with real credentials - use application-local.properties
+# for local dev (activated via SPRING_PROFILES_ACTIVE=local). The main
+# application.properties only contains ${ENV_VAR} placeholders and is safe to commit.
+src/main/resources/application-local.properties
